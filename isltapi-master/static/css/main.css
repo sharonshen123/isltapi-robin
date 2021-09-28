@@ -1,0 +1,17 @@
+body {
+    background-color: #b1e9fad7;
+}
+
+.dataform,
+.container {
+    margin-top: 25px;
+}
+
+.item {
+    margin-top: 2px;
+    padding: 2px;
+}
+
+.btn-block {
+    margin-top: 5px;
+}

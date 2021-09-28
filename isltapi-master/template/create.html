@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ISLT</title>
+    <!-- Latest compiled and minified CSS -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="dataform d-flex">
+            <div class="card text-white bg-info mb-3" style="max-width: 25rem;">
+                <div class="card-header">Create New Data</div>
+                <div class="card-body">
+                    <h5 class="card-title">Fill Word Data</h5>
+                    <form class="form-inline" action="sendData" method="POST">
+                        <div class="item">
+							<select id="book" name="book" >
+								<option value="In Search of Lost Time" key=1>In Search of Lost Time</option>
+								<option value="Romeo and Juliet" key=2>Romeo and Juliet</option>
+								<option value="Hamlet" key=3>Hamlet</option>
+								<option value="To Kill a Mocking bird" key=4>To Kill a Mocking bird</option>
+								<option value="The Economists" key=5>The Economists</option>
+							</select>
+                            
+                        </div>
+						<div class="item">
+                            <input name="pg" id="pg" type="number" value="{{ pg }}" placeholder="Enter Page Number">
+                        </div>
+                        <div class="item">
+                            <input name="word" id="word" type="text" value="{{ word }}" placeholder="Enter Word">
+                        </div>
+                        <div class="item">
+                            <input name="definition" id="definition" type="text" value="{{ definition }}" placeholder="Enter Definition">
+                        </div>
+
+                        <div class="item">
+                            <textarea class="form-control shadow-none textarea" name="sentence" id="sentence" value="{{ sentence }}" placeholder="Enter Sentence"
+                                style="resize: none"></textarea>
+                        </div>
+
+                        <div class="item">
+                            <input name="category" id="category" type="text" value="{{ category }}" placeholder="Enter Category">
+                        </div>
+                        <div class="item">
+                            <textarea class="form-control shadow-none textarea" name="sample" id="sample" value="{{ sample }}" placeholder="Enter Sample"
+                                style="resize: none"></textarea>
+                        </div>
+                        <div class="item">
+                            <input name="synonyms" id="synonyms" type="text" value="{{ synonyms }}" placeholder="Enter Synonyms">
+                        </div>
+                        <div class="btn-block">
+                            <button type="submit" class="btn btn-danger" href="/">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
